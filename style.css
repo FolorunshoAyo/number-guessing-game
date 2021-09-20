@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(240, 239, 239);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.main{
+    width: 60%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.description{
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.description h2{
+    background-color: rgb(189, 53, 53);
+    padding: 0.2em 0;
+    color: white;
+}
+
+.description p{
+    margin-top: 1em;
+}
+
+.game-container{
+    text-align: center;
+    background-color: rgb(175, 146, 29);
+    height: 22.5em;
+}
+
+form#numberGuess h1{
+    height: 2em;
+    padding: 0.4em 0;
+}
+
+form#numberGuess textarea{
+    resize: vertical;
+}
+
+form#numberGuess textarea:focus{
+    box-shadow: 2px 2px 3px 3px black;
+    outline: none;
+    border: 3px solid rgb(167, 148, 43);
+}
+
+form#numberGuess input[type="submit"]{
+    margin: 2em auto;
+    padding: 0.5em 0;
+    border-radius: 0.5em;
+    background-color: rgb(39, 36, 36);
+    width: 50%;
+    border: 1px solid black;
+    color: white;
+    display: block;
+    cursor: pointer;
+}
+
+div.status p{
+    margin: 1.5em 0;
+}
+
+div.reportContainer p{
+    background-color: rgb(189, 53, 53);
+    padding: 0.5em 0;
+    color: white;
+    font-size: 2em;
+}
+
+.hide{
+    display: none;
+}
+
+div.reportContainer p.success{
+    background-color: green;
+    padding: 0.5em 0;
+    color: white;
+    font-size: 2em;
+}
