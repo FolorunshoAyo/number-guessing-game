@@ -1,22 +1,23 @@
 (function(){
-    let formEL = document.getElementById("numberGuess");
-    let report = document.getElementById("report");
-    let reportContainer = document.querySelector(".reportContainer");
+    const formEL = document.getElementById("numberGuess");
+    const report = document.getElementById("report");
+    const reportContainer = document.querySelector(".reportContainer");
     let prevGuessCounter = 0, remGuessesCounter = 10, correctGuessesCounter = 0;
 
-    let generateRandomNumber = function(){
+    const generateRandomNumber = function(){
         let randomNumber = Math.floor(Math.random() * 100);
         return randomNumber;
     };
 
-    let updatePrevGuess = function(){
+
+    const updatePrevGuess = function(){
         let prevGuessEl = document.getElementById("prevGuesses");
         prevGuessCounter++;
 
         prevGuessEl.textContent = prevGuessCounter;
     };
 
-    let guessesRemaining = function(){
+    const guessesRemaining = function(){
         let remGuessesEl = document.getElementById("remGuesses");
 
         if(remGuessesCounter == 0){
@@ -28,17 +29,16 @@
         remGuessesEl.textContent = remGuessesCounter;
     };
 
-    let correctGuessUpdate = function(){
+    const correctGuessUpdate = function(){
         let correctGuessEl = document.getElementById("correctGuesses");
         correctGuessesCounter++;
 
         correctGuessEl.textContent = correctGuessesCounter;
     };
 
-    let numberToGuess = generateRandomNumber();
-    console.log(numberToGuess);
+    const numberToGuess = generateRandomNumber();
 
-    let check = function(numberInputed){
+    const check = function(numberInputed){
         if(numberInputed < numberToGuess){
             report.textContent = "Number is too low try again";
             reportContainer.classList.remove("hide");
